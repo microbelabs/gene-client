@@ -26,6 +26,10 @@
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/7zip/-/7zip-0.0.6.tgz#9cafb171af82329490353b4816f03347aa150a30"
 
+"@microsoft/load-themed-styles@^1.7.2":
+  version "1.7.13"
+  resolved "https://registry.yarnpkg.com/@microsoft/load-themed-styles/-/load-themed-styles-1.7.13.tgz#3035c6d61120eae7361d2cc9d605e28d0d2bfbfb"
+
 "@types/cheerio@*":
   version "0.22.2"
   resolved "https://registry.yarnpkg.com/@types/cheerio/-/cheerio-0.22.2.tgz#539625874bc856086ad491c2fdc9b10c05ae308e"
@@ -114,9 +118,40 @@
   dependencies:
     redux "^3.6.0"
 
-"@types/sinon@4.0.0":
+"@types/sinon@^4.0.0":
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/@types/sinon/-/sinon-4.0.0.tgz#9a93ffa4ee1329e85166278a5ed99f81dc4c8362"
+
+"@uifabric/icons@>=5.3.0 <6.0.0":
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/@uifabric/icons/-/icons-5.3.0.tgz#2aef7b3b8c3bc8525da978506bfb1f7a86f1cf1d"
+  dependencies:
+    "@uifabric/styling" ">=5.12.0 <6.0.0"
+    tslib "^1.6.0"
+
+"@uifabric/merge-styles@>=5.6.0 <6.0.0", "@uifabric/merge-styles@>=5.8.0 <6.0.0":
+  version "5.8.0"
+  resolved "https://registry.yarnpkg.com/@uifabric/merge-styles/-/merge-styles-5.8.0.tgz#a9a1aba59c483f7c75dbbf8234cdf02d09ddcea4"
+  dependencies:
+    tslib "^1.7.1"
+
+"@uifabric/styling@>=5.12.0 <6.0.0", "@uifabric/styling@>=5.14.0 <6.0.0":
+  version "5.14.0"
+  resolved "https://registry.yarnpkg.com/@uifabric/styling/-/styling-5.14.0.tgz#9a0c2ee570ec9a667ffd0f1e2627bc749ee0c8db"
+  dependencies:
+    "@microsoft/load-themed-styles" "^1.7.2"
+    "@uifabric/merge-styles" ">=5.8.0 <6.0.0"
+    "@uifabric/utilities" ">=5.5.0 <6.0.0"
+    tslib "^1.7.1"
+
+"@uifabric/utilities@>=5.5.0 <6.0.0":
+  version "5.5.0"
+  resolved "https://registry.yarnpkg.com/@uifabric/utilities/-/utilities-5.5.0.tgz#828edb28d4ca054dbaa6ea6ca04a3b9aacf251c6"
+  dependencies:
+    "@microsoft/load-themed-styles" "^1.7.2"
+    "@uifabric/merge-styles" ">=5.6.0 <6.0.0"
+    prop-types "^15.5.10"
+    tslib "^1.7.1"
 
 abab@^1.0.3:
   version "1.0.3"
@@ -333,7 +368,7 @@ asar-integrity@0.2.0:
     bluebird-lst "^1.0.3"
     fs-extra-p "^4.4.0"
 
-asar@0.14.0:
+asar@^0.14.0:
   version "0.14.0"
   resolved "https://registry.yarnpkg.com/asar/-/asar-0.14.0.tgz#998b36a26abd0e590e55d9f92cfd3fd7a6051652"
   dependencies:
@@ -765,6 +800,13 @@ buffer@^4.3.0:
     base64-js "^1.0.2"
     ieee754 "^1.1.4"
     isarray "^1.0.0"
+
+buffer@^5.0.3:
+  version "5.0.8"
+  resolved "https://registry.yarnpkg.com/buffer/-/buffer-5.0.8.tgz#84daa52e7cf2fa8ce4195bc5cf0f7809e0930b24"
+  dependencies:
+    base64-js "^1.0.2"
+    ieee754 "^1.1.4"
 
 buffers@~0.1.1:
   version "0.1.1"
@@ -1274,6 +1316,10 @@ crypto-random-string@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/crypto-random-string/-/crypto-random-string-1.0.0.tgz#a230f64f568310e1498009940790ec99545bca7e"
 
+css-color-keywords@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/css-color-keywords/-/css-color-keywords-1.0.0.tgz#fea2616dc676b2962686b3af8dbdbe180b244e05"
+
 css-color-names@0.0.4:
   version "0.0.4"
   resolved "https://registry.yarnpkg.com/css-color-names/-/css-color-names-0.0.4.tgz#808adc2e79cf84738069b646cb20ec27beb629e0"
@@ -1336,6 +1382,14 @@ css-selector-tokenizer@^0.7.0:
     cssesc "^0.1.0"
     fastparse "^1.1.1"
     regexpu-core "^1.0.0"
+
+css-to-react-native@^2.0.3:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/css-to-react-native/-/css-to-react-native-2.0.4.tgz#cf4cc407558b3474d4ba8be1a2cd3b6ce713101b"
+  dependencies:
+    css-color-keywords "^1.0.0"
+    fbjs "^0.8.5"
+    postcss-value-parser "^3.3.0"
 
 css-value@~0.0.1:
   version "0.0.1"
@@ -2215,7 +2269,7 @@ fb-watchman@^2.0.0:
   dependencies:
     bser "^2.0.0"
 
-fbjs@^0.8.16:
+fbjs@^0.8.16, fbjs@^0.8.5:
   version "0.8.16"
   resolved "https://registry.yarnpkg.com/fbjs/-/fbjs-0.8.16.tgz#5e67432f550dc41b572bf55847b8aca64e5337db"
   dependencies:
@@ -2692,6 +2746,10 @@ hoek@2.x.x:
   version "2.16.3"
   resolved "https://registry.yarnpkg.com/hoek/-/hoek-2.16.3.tgz#20bb7403d3cea398e91dc4710a8ff1b8274a25ed"
 
+hoist-non-react-statics@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-1.2.0.tgz#aa448cf0986d55cc40773b17174b7dd066cb7cfb"
+
 hoist-non-react-statics@^2.2.1, hoist-non-react-statics@^2.3.0:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-2.3.1.tgz#343db84c6018c650778898240135a1420ee22ce0"
@@ -2975,7 +3033,7 @@ is-fullwidth-code-point@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/is-fullwidth-code-point/-/is-fullwidth-code-point-2.0.0.tgz#a3b30a5c4f199183167aaab93beefae3ddfb654f"
 
-is-function@~1.0.0:
+is-function@^1.0.1, is-function@~1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/is-function/-/is-function-1.0.1.tgz#12cfb98b65b57dd3d193a3121f5f6e2f437602b5"
 
@@ -4284,6 +4342,18 @@ object.values@^1.0.4:
     es-abstract "^1.6.1"
     function-bind "^1.1.0"
     has "^1.0.1"
+
+office-ui-fabric-react@^5.30.2:
+  version "5.30.2"
+  resolved "https://registry.yarnpkg.com/office-ui-fabric-react/-/office-ui-fabric-react-5.30.2.tgz#7cfb4afb71b73994032126dc9ef026339c92ece5"
+  dependencies:
+    "@microsoft/load-themed-styles" "^1.7.2"
+    "@uifabric/icons" ">=5.3.0 <6.0.0"
+    "@uifabric/merge-styles" ">=5.8.0 <6.0.0"
+    "@uifabric/styling" ">=5.14.0 <6.0.0"
+    "@uifabric/utilities" ">=5.5.0 <6.0.0"
+    prop-types "^15.5.10"
+    tslib "^1.7.1"
 
 on-finished@~2.3.0:
   version "2.3.0"
@@ -5832,6 +5902,24 @@ style-loader@^0.19.0:
     loader-utils "^1.0.2"
     schema-utils "^0.3.0"
 
+styled-components@^2.2.4:
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-2.2.4.tgz#dd87fd3dafd359e7a0d570aec1bd07d691c0b5a2"
+  dependencies:
+    buffer "^5.0.3"
+    css-to-react-native "^2.0.3"
+    fbjs "^0.8.9"
+    hoist-non-react-statics "^1.2.0"
+    is-function "^1.0.1"
+    is-plain-object "^2.0.1"
+    prop-types "^15.5.4"
+    stylis "^3.4.0"
+    supports-color "^3.2.3"
+
+stylis@^3.4.0:
+  version "3.4.5"
+  resolved "https://registry.yarnpkg.com/stylis/-/stylis-3.4.5.tgz#d7b9595fc18e7b9c8775eca8270a9a1d3e59806e"
+
 sumchecker@^1.2.0:
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/sumchecker/-/sumchecker-1.3.1.tgz#79bb3b4456dd04f18ebdbc0d703a1d1daec5105d"
@@ -6099,6 +6187,10 @@ tsconfig@^6.0.0:
   dependencies:
     strip-bom "^3.0.0"
     strip-json-comments "^2.0.0"
+
+tslib@^1.6.0:
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.8.1.tgz#6946af2d1d651a7b1863b531d6e5afa41aa44eac"
 
 tslib@^1.7.1:
   version "1.7.1"
@@ -6441,7 +6533,7 @@ webpack-hot-middleware@^2.13.2:
     querystring "^0.2.0"
     strip-ansi "^3.0.0"
 
-webpack-merge@4.1.1:
+webpack-merge@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/webpack-merge/-/webpack-merge-4.1.1.tgz#f1197a0a973e69c6fbeeb6d658219aa8c0c13555"
   dependencies:
