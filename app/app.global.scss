@@ -1,7 +1,35 @@
-@import "~font-awesome/css/font-awesome.css";
+@import "~hint.css/hint.min.css";
 @import "~office-ui-fabric-react/dist/css/fabric.min.css";
+@import "./fonts/lato/font.scss";
+
+:root {
+  --light-text: #333333;
+  --light-blue: #2F80ED;
+  --light-line: #ebebeb;
+}
 
 body {
   margin: 0px;
   padding: 0px;
+  font-family: 'Lato';
+  font-size: 14px;
+}
+
+a, button {
+  cursor: default !important;
+}
+
+.root-32 {
+  font-family: 'Lato';
+}
+
+.ms-Pivot {
+  button:first-child {
+    margin-left: 0;
+    padding-left: 0;
+
+    &:before {
+      left: 0;
+    }
+  }
 }
