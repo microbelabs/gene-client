@@ -41,7 +41,7 @@ const NavItem  = styled.div`
 
 const NavItems: Array<any> = [
   {
-    url: '/my-wallet',
+    url: '/',
     icon: () => <Icon.Wallet />,
     label: 'Wallets',
     desc: 'GENE Token Cold Storage'
@@ -77,7 +77,9 @@ export default class NavBar extends React.Component {
   render() {
     return (
       <Navbar>
-        <Icon.Logo />
+        <Link to="/">
+          <Icon.Logo />
+        </Link>
         <Navigation>
           {NavItems.map(item => {
             const key = item.url.replace('/', '')
