@@ -2,14 +2,13 @@ import * as React from 'react';
 import styled from 'styled-components';
 import { Pivot, PivotItem } from 'office-ui-fabric-react/lib/Pivot';
 
-const WalletContainer = styled.div`
-  padding: 10px;
-`;
+// Temp
+const Fragment = styled.div``;
 
 export default class Wallet extends React.Component<any, any> {
   public render() {
     return (
-      <WalletContainer>
+      <Fragment>
         <Pivot>
           <PivotItem linkText="My Tokens">
             List of tokens here
@@ -21,7 +20,7 @@ export default class Wallet extends React.Component<any, any> {
             reara
           </PivotItem>
         </Pivot>
-      </WalletContainer>
+      </Fragment>
     );
   };
 }
