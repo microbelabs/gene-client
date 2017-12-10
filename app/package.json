@@ -1,14 +1,18 @@
 {
-  "name": "electron-react-typescript-boilerplate",
-  "productName": "electron-typescript-react-boilerplate",
+  "name": "gene-token-client",
+  "productName": "gene-token-client",
   "version": "1.0.0",
-  "description": "Electron application boilerplate based on TypeScript, React, React Router, Webpack, React Hot Loader for rapid application development",
+  "description": "GENE Token Client",
   "main": "./main.js",
-  "author": {
-    "name": "Alexander Rath",
-    "email": "irath96@gmail.com",
-    "url": "https://github.com/irath96"
-  },
+  "contributors": [{
+    "name": "Ribhararnus Pracutian",
+    "email": "pracutian@ribhnux.tech",
+    "url": "https://github.com/oknoorap"
+  },{
+    "name": "Ribhararnus Pracutiar",
+    "email": "pracutiar@ribhnux.tech",
+    "url": "https://github.com/raitucarp"
+  }],
   "scripts": {
     "postinstall": "npm rebuild --runtime=electron --target=1.6.6 --disturl=https://atom.io/download/atom-shell --build-from-source"
   },
