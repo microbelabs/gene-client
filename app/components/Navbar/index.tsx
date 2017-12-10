@@ -44,14 +44,14 @@ const NavItems: Array<any> = [
     url: '/my-wallet',
     icon: () => <Icon.Wallet />,
     label: 'Wallets',
-    desc: 'GENE Cold Storage'
+    desc: 'GENE Token Cold Storage'
   },
 
   {
     url: '/games',
     icon: () => <Icon.Game />,
     label: 'Games',
-    desc: 'View and Manage Registered Games'
+    desc: 'View and Manage Games'
   },
 
   {
@@ -65,7 +65,7 @@ const NavItems: Array<any> = [
     url: '/community',
     icon: () => <Icon.Community />,
     label: 'Community',
-    desc: 'Our communities around the world'
+    desc: 'Join Our Communities'
   }
 ]
 
