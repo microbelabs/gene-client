@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import * as Icon from './icon'
+import * as Icon from '../SVGIcon'
 
 const Navbar = styled.div`
   padding: 15px 30px;
@@ -9,6 +9,8 @@ const Navbar = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
+  top: 0;
 `;
 
 const Navigation = styled.div`
@@ -58,7 +60,7 @@ const NavItems: Array<any> = [
     url: '/marketplace',
     icon: () => <Icon.Marketplace />,
     label: 'Marketplace',
-    desc: 'Buy and Sell Game Properties'
+    desc: 'Buy and Sell Game Attributes'
   },
 
   {
