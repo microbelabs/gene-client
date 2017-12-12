@@ -73,9 +73,9 @@ app.on('ready', () =>
 
   if (process.platform === 'darwin') {
     template = [{
-      label: 'Electron',
+      label: 'GENE Client',
       submenu: [{
-        label: 'About ElectronReact',
+        label: 'About GENE Client',
         selector: 'orderFrontStandardAboutPanel:'
       }, {
         type: 'separator'
@@ -85,7 +85,7 @@ app.on('ready', () =>
       }, {
         type: 'separator'
       }, {
-        label: 'Hide ElectronReact',
+        label: 'Hide GENE Client',
         accelerator: 'Command+H',
         selector: 'hide:'
       }, {
@@ -177,26 +177,29 @@ app.on('ready', () =>
         selector: 'arrangeInFront:'
       }]
     }, {
+      label: 'Network',
+      submenu: [{
+        label: 'Testnet (8545)',
+        click() {
+        }
+      }, {
+        label: 'Rinkeby',
+        click() {}
+      }, {
+        label: 'Mainnet',
+        click() {}
+      }]
+    }, {
       label: 'Help',
       submenu: [{
         label: 'Learn More',
         click() {
-          shell.openExternal('http://electron.atom.io');
+          shell.openExternal('http://genetoken.io');
         }
       }, {
-        label: 'Documentation',
+        label: 'Submit Issues',
         click() {
-          shell.openExternal('https://github.com/atom/electron/tree/master/docs#readme');
-        }
-      }, {
-        label: 'Community Discussions',
-        click() {
-          shell.openExternal('https://discuss.atom.io/c/electron');
-        }
-      }, {
-        label: 'Search Issues',
-        click() {
-          shell.openExternal('https://github.com/atom/electron/issues');
+          shell.openExternal('https://github.com/microbelabs/gene-client/issues');
         }
       }]
     }];
@@ -244,26 +247,29 @@ app.on('ready', () =>
         }
       }]
     }, {
+      label: '&Network',
+      submenu: [{
+        label: '&Testnet (8545)',
+        click() {
+        }
+      }, {
+        label: '&Rinkeby',
+        click() {}
+      }, {
+        label: '&Mainnet',
+        click() {}
+      }]
+    }, {
       label: 'Help',
       submenu: [{
         label: 'Learn More',
         click() {
-          shell.openExternal('http://electron.atom.io');
+          shell.openExternal('http://genetoken.io');
         }
       }, {
-        label: 'Documentation',
+        label: 'Submit Issues',
         click() {
-          shell.openExternal('https://github.com/atom/electron/tree/master/docs#readme');
-        }
-      }, {
-        label: 'Community Discussions',
-        click() {
-          shell.openExternal('https://discuss.atom.io/c/electron');
-        }
-      }, {
-        label: 'Search Issues',
-        click() {
-          shell.openExternal('https://github.com/atom/electron/issues');
+          shell.openExternal('https://github.com/microbelabs/gene-client/issues');
         }
       }]
     }];
